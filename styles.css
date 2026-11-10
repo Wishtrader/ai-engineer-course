@@ -324,6 +324,24 @@ li::marker { color: #4a5563; }
   .check { min-height: 48px; }
 }
 
+/* ── цель шага и место в пайплайне ──────────────────────── */
+.step-goal {
+  margin: 18px 0 10px; padding: 12px 14px; border-radius: var(--r);
+  border: 1px solid #1f4a33; background: #0c1712; color: #cfe9d8; font-size: 14.2px;
+  display: grid; grid-template-columns: 96px 1fr; gap: 10px; align-items: baseline;
+}
+.step-goal span, .step-where span {
+  font-family: var(--mono); font-size: 9.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--green);
+}
+.step-where {
+  margin: 0 0 8px; padding: 10px 14px; border-radius: var(--r);
+  border: 1px dashed var(--line); background: #0d1216; color: var(--ink-2); font-size: 13.2px;
+  display: grid; grid-template-columns: 96px 1fr; gap: 10px; align-items: baseline;
+}
+.step-where span { color: var(--muted); }
+.note.why { border-color: #1c3a4d; background: #0b1418; }
+.note.why .ico { color: var(--blue); }
+
 /* ── заметки ────────────────────────────────────────────── */
 .check-row { display: grid; grid-template-columns: 1fr auto; align-items: center; border-bottom: 1px solid var(--line-soft); }
 .check-row:last-child { border-bottom: 0; }

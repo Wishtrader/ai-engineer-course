@@ -280,6 +280,8 @@
     art.appendChild(el("div", "eyebrow", `шаг ${step.n} · ${stepItems(step.n).length} пунктов${examInfo}`));
     art.appendChild(el("h1", null, step.title));
     art.appendChild(el("p", "lede", step.summary));
+    if (step.goal) art.appendChild(el("div", "step-goal", `<span>после шага</span>${step.goal}`));
+    if (step.where) art.appendChild(el("div", "step-where", `<span>в пайплайне</span>${step.where}`));
 
     step.blocks.forEach((b, idx) => {
       const anchor = `${step.id}:${idx}`;
@@ -302,7 +304,8 @@
         case "note": {
           node = el("div", `note ${b.kind || ""}`);
           const title = b.title ? `<strong>${b.title}</strong><br>` : "";
-          node.innerHTML = `<span class="ico">${b.kind === "warn" ? "!" : "▸"}</span><div>${title}${b.text}</div>`;
+          const ico = b.kind === "warn" ? "!" : b.kind === "why" ? "?" : "▸";
+          node.innerHTML = `<span class="ico">${ico}</span><div>${title}${b.text}</div>`;
           break;
         }
         case "checks": node = checklist(b.items, step.id); break;
