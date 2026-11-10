@@ -4,7 +4,7 @@
 от `venv` до продакшн-решений, чек-листы, задания с готовыми командами, трекер прогресса и план из 7 фаз
 под трек B (AI Product Engineer).
 
-**Открыть:** см. ссылку GitHub Pages в описании репозитория (или `https://wishtrader.github.io/ai-engineer-course/`).
+**Открыть:** https://wishtrader.github.io/ai-engineer-course/
 
 ## Что внутри
 
